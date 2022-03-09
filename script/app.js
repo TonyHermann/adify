@@ -13,21 +13,21 @@ class Card {
     }
     xImagen() {
         let source = this.imagen;
-        console.log("esto sacó del xImagen " + source);
+
         return source
     }
     xTitulo() {
         let value = this.titulo;
-        console.log("esto sacó el xtitulo " + value)
+
         return value
     }
 }
 
 var coleccion = [];
-coleccion.push(new Card("https://artsdot.com/ADC/Art.nsf/O/8XZNYG/$File/Dominicus-Lampsonius-Portrait-of-Pieter-Bruegel-the-Elder-2-.JPG", "Fly", "fa fa-play"));
-coleccion.push(new Card("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA-8dMLVNYmNr7pMOO-xu-GYU1ceI8oKOxjJZYAvcZIjYA3RpCPv3RuNbPZufKyR9Dns0&usqp=CAU", "Me", "fa fa-play"));
-coleccion.push(new Card("https://www.hisour.com/wp-content/uploads/2020/01/Der-Blaue-Reiter-1280x720.jpg", "To the", "fa fa-play"));
-coleccion.push(new Card("https://upload.wikimedia.org/wikipedia/commons/9/97/Ernst_Maria_Richard_Stadler.jpg", "Moon", "fa fa-play"));
+coleccion.push(new Card("../resources/images/image.png", "Fly", "fa fa-play"));
+coleccion.push(new Card("../resources/images/image.png", "Me", "fa fa-play"));
+coleccion.push(new Card("../resources/images/image.png", "To the", "fa fa-play"));
+coleccion.push(new Card("../resources/images/image.png", "Moon", "fa fa-play"));
 
 
 
@@ -51,8 +51,9 @@ for (var x of coleccion) {
     boton.setAttribute("class", "fa fa-play");
     boton.setAttribute("aria-hidden", "true");
     botonDiv.appendChild(boton);
-    info.appendChild(botonDiv);
+
     childDiv.appendChild(info);
+    childDiv.appendChild(botonDiv);
 }
 
 let fatherDivPodcast = document.getElementById("container-cards-podcasts");
@@ -66,37 +67,37 @@ class CardP {
     }
     yImagen() {
         let source = this.imagen;
-        console.log("esto sacó del yImagen " + source);
+
         return source
     }
     yTitulo() {
         let value = this.titulo;
-        console.log("esto sacó el ytitulo " + value);
+
         return value
     }
 
     ySub() {
         let subvalue = this.stitulo;
-        console.log("esto sacó el ysub " + subvalue);
+
         return subvalue
     }
     ySong() {
         let srcc = this.song;
-        console.log("esto sacó el ySongSource " + srcc);
+
         return srcc
     }
 }
 
 var coleccionP = [];
-coleccionP.push(new CardP("https://3minutosdearte.com/wp-content/uploads/2018/08/Kirchner-Marcella-1910-e1554142943637.jpg", "Overthink", "Antonio Alejo Serral Hermann, Tomas Ariel Quero, Bruno Marchett y Juan Cruz Mercadal", "./resources/audio/se-he_mar_que_mer.mp3"));
-coleccionP.push(new CardP("https://cdn.discordapp.com/attachments/854073695780470784/856897914306560010/220px-Pieter_Bruegel_the_Elder_-_The_Painter_and_the_Buyer2C_1565_-_Google_Art_Project.png", "Pieter Brueghel el Viejo", "Autoretrato"));
-coleccionP.push(new CardP("https://lamecanicaceleste.files.wordpress.com/2020/09/stadler.jpg?w=670", "Ernst Sadler", "Grandes exitos"));
-coleccionP.push(new CardP("https://www.visitoslo.com/contentassets/3932b41a7b684b40a28d3195191265fe/edvard-munch-nasjonalbiblioteket.jpg?preset=Teaser", "This is Edvard Munch", "A spotify playlist"));
-coleccionP.push(new CardP("https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Marc%2C_Franz_-_Blue_Horse_I_-_Google_Art_Project.jpg/220px-Marc%2C_Franz_-_Blue_Horse_I_-_Google_Art_Project.jpg", "This is Der Blaue Reiter"));
-coleccionP.push(new CardP("https://3minutosdearte.com/wp-content/uploads/2018/08/Kirchner-Marcella-1910-e1554142943637.jpg", "Artistin", "Marcella Kirchner"));
+coleccionP.push(new CardP("../resources/images/image.png", "Overthink", "Me and my panas"));
+coleccionP.push(new CardP("../resources/images/image.png", "Pieter Brueghel el Viejo", "Autoretrato"));
+coleccionP.push(new CardP("../resources/images/image.png", "Ernst Sadler", "Grandes exitos"));
+coleccionP.push(new CardP("../resources/images/image.png", "This is Edvard Munch", "A spotify playlist"));
+coleccionP.push(new CardP("../resources/images/image.png", "This is Der Blaue Reiter"));
+coleccionP.push(new CardP("../resources/images/image.png", "Artistin", "Marcella Kirchner"));
 
 for (var y of coleccionP) {
-    console.log(y);
+
     if (y.titulo === "Overthink") {
         let childDivY = document.createElement('div');
         childDivY.setAttribute("class", "card-podcast");
@@ -202,7 +203,7 @@ pause_button_two.addEventListener("click", playSs);
 song.addEventListener('timeupdate', function () {
     songtrack.max = song.duration;
     let position = song.currentTime;
-    console.log(position);
+
     songtrack.value = position;
 })
 
@@ -212,11 +213,10 @@ songtrack.addEventListener('change', function () {
 })
 
 volumetrack.addEventListener('change', function () {
-    console.log(volumetrack.value)
-    console.log(volumetrack.value / 100)
+
     let volumeValue = volumetrack.value / 100
     song.volume = volumeValue;
-    console.log("song volume " + song.volume)
+
 })
 
 
@@ -254,13 +254,13 @@ let forwadarrow = document.getElementById("back_and_forwad_forward");
 backarrow_two.addEventListener("click", function() {
     firstcontainer.style.display = "unset";
     secondcontainer.style.display = "none";
-    console.log("hola")
+
 });
 
 forwardarrow.addEventListener("click", function() {
     firstcontainer.style.display = "unset";
     secondcontainer.style.display = "none";
-    console.log("hola")
+
 });
 
 

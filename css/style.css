@@ -58,9 +58,8 @@ main::-webkit-scrollbar:vertical {
 }
 
 .card-playlist {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 30% 10% 20% ;
     background: rgb(230, 230, 230);
     background: linear-gradient(180deg, rgba(230, 230, 230, 0.14329481792717091) 0%, rgba(230, 230, 230, 0.15449929971988796) 100%);
     width: 30rem;
@@ -78,12 +77,13 @@ main::-webkit-scrollbar:vertical {
 .card-playlist span {
     font-size: 2rem;
     text-align: center;
-    margin: 1rem;
+
 }
 
 .card-playlist img {
     margin: 1rem;
     margin-left: 0rem;
+    margin-right: 0rem;
     height: 6rem;
     width: 6rem;
     border-radius: 4px;
@@ -102,6 +102,11 @@ main::-webkit-scrollbar:vertical {
 .button-play {
     opacity: 0;
     transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    margin-left: 2vh;
 }
 
 .button-play:hover {
