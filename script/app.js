@@ -24,10 +24,10 @@ class Card {
 }
 
 var coleccion = [];
-coleccion.push(new Card("../resources/images/image.png", "Fly", "fa fa-play"));
-coleccion.push(new Card("../resources/images/image.png", "Me", "fa fa-play"));
-coleccion.push(new Card("../resources/images/image.png", "To the", "fa fa-play"));
-coleccion.push(new Card("../resources/images/image.png", "Moon", "fa fa-play"));
+coleccion.push(new Card("../adify/resources/images/image.png", "Fly", "fa fa-play"));
+coleccion.push(new Card("../adify/resources/images/image.png", "Me", "fa fa-play"));
+coleccion.push(new Card("../adify/resources/images/image.png", "To the", "fa fa-play"));
+coleccion.push(new Card("../adify/resources/images/image.png", "Moon", "fa fa-play"));
 
 
 
@@ -89,12 +89,12 @@ class CardP {
 }
 
 var coleccionP = [];
-coleccionP.push(new CardP("../resources/images/image.png", "Overthink", "Me and my panas"));
-coleccionP.push(new CardP("../resources/images/image.png", "Pieter Brueghel el Viejo", "Autoretrato"));
-coleccionP.push(new CardP("../resources/images/image.png", "Ernst Sadler", "Grandes exitos"));
-coleccionP.push(new CardP("../resources/images/image.png", "This is Edvard Munch", "A spotify playlist"));
-coleccionP.push(new CardP("../resources/images/image.png", "This is Der Blaue Reiter"));
-coleccionP.push(new CardP("../resources/images/image.png", "Artistin", "Marcella Kirchner"));
+coleccionP.push(new CardP("../adify/resources/images/image.png", "Overthink", "Me and my panas"));
+coleccionP.push(new CardP("../adify/resources/images/image.png", "Pieter Brueghel el Viejo", "Autoretrato"));
+coleccionP.push(new CardP("../adify/resources/images/image.png", "Ernst Sadler", "Grandes exitos"));
+coleccionP.push(new CardP("../adify/resources/images/image.png", "This is Edvard Munch", "A spotify playlist"));
+coleccionP.push(new CardP("../adify/resources/images/image.png", "This is Der Blaue Reiter"));
+coleccionP.push(new CardP("../adify/resources/images/image.png", "Artistin", "Marcella Kirchner"));
 
 for (var y of coleccionP) {
 
